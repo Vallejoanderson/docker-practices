@@ -1,0 +1,11 @@
+# version '3.8'
+
+services:
+  mysql:
+    build:
+      context: .
+      dockerfile: mysql.dockerfile
+    ports:
+      - 3700:3306
+    volumes:
+      - ./mysql:/var/lib/mysql
