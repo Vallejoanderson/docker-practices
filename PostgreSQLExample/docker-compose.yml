@@ -1,0 +1,13 @@
+
+
+services:
+  db:
+    build:
+      context: .
+      dockerfile: postgresql.dockerfile
+    ports:
+      - 3800:5432
+    volumes:
+      - db-data:/var/lib/postgresql/data
+volumes:
+  db-data:
